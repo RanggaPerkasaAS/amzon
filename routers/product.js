@@ -7,11 +7,11 @@ app.use(express.json());
 //panggil model product
 const Product = require("../model/product");
 
-// //panggil fungsi auth -> validasi token
-// const {auth} = require("./auth")
+//panggil fungsi auth -> validasi token
+const { auth } = require("./auth");
 
-// //fungsi auth dijadikan middleware
-// app.use(auth)
+//fungsi auth dijadikan middleware
+app.use(auth);
 
 //get all product
 app.get("/", (req, res) => {
